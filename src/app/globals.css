@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.invoice-input {
+		@apply w-full rounded-sm border-rose  p-3 caret-primary focus:border-secondary focus:ring-0  dark:border-secondaryDark dark:bg-primaryDark dark:focus:border-primary;
+	}
+	.remove-input-arrows::-webkit-inner-spin-button,
+	.remove-input-arrows::-webkit-outer-spin-button {
+		appearance: none;
+	}
+	.form-scroll::-webkit-scrollbar,
+	.form-scroll-light::-webkit-scrollbar {
+		width: 14px;
+	}
+	.form-scroll::-webkit-scrollbar-track,
+	.form-scroll-light::-webkit-scrollbar-track {
+		background-color: transparent;
+
+	}
+	.form-scroll::-webkit-scrollbar-thumb {
+		background-color: #1e2139;
+		border-radius: 12px;
+		
+	}
+	.form-scroll-light::-webkit-scrollbar-thumb {
+		background-color: #dfe3fa;
+		border-radius: 12px;
+	}
+}
+@layer utilities {
+	.invoice-error-input {
+		@apply border-lightRed caret-red focus:border-red dark:border-lightRed dark:focus:border-red;
+	}
+}
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+:root {
+	--toastify-color-success: #9277ff !important;
+	scroll-behavior: smooth;
+}
+
+body {
+	height: 100vh;
+	overflow-x: hidden;
+}
+.shadow {
+	box-shadow: 0px 0px 100px rgba(92, 92, 92, 0.335);
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: inherit;
+	font-size: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+.underlineLink::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 25%;
+	height: 1px;
+	background-color: #9277ff;
+	transition: width 0.3s;
+}
+.underlineLink:hover::after {
+	width: 100%;
+}
