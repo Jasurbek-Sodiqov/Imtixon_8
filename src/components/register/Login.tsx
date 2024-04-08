@@ -50,7 +50,7 @@ export const Login = () => {
 	}
 	const [isTestAcc, setTestAcc] = useState(false)
 	const handleTestAccount = () => {
-		setValue('email', 'nadia@doe.com')
+		setValue('email', 'jasur2002@.com')
 		setValue('password', 'Minutes1!')
 
 		setTestAcc(true)
