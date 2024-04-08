@@ -20,7 +20,7 @@ export const BillToForm = (props: BillToTypeProps) => {
 					{...props}
 					error={error?.clientName}
 					id='username'
-					label="Client's Name"
+					label='Clients Name'
 					name='receiver.clientName'
 				/>
 				<ControlInput
@@ -29,7 +29,7 @@ export const BillToForm = (props: BillToTypeProps) => {
 					id='email'
 					type='email'
 					placeholder='e.g.email@example.com'
-					label="Client's email"
+					label='Clients email'
 					name='receiver.clientEmail'
 				/>
 				<ControlInput

@@ -1,31 +1,37 @@
-import { RefObject, useEffect, useState } from 'react'
+import { RefObject, useEffect, useState } from 'react';
 
-import { useToggle } from './useToggle'
-export const useOutsideClick = (ref: RefObject<HTMLElement>, closeOnItem = true) => {
-	const [refObj, setRef] = useState<RefObject<HTMLElement>>()
+import { useToggle } from './useToggle';
+export const useOutsideClick = (
+  ref: RefObject<HTMLElement>,
+  closeOnItem = true
+) => {
+  const [refObj, setRef] = useState<RefObject<HTMLElement>>();
 
-	const [isOpen, toggleState] = useToggle()
+  const [isOpen, toggleState] = useToggle();
 
-	const outsideHandler = (e: MouseEvent) => {
-		const target = e.target as HTMLElement
+  const outsideHandler = (e: MouseEvent) => {
+    const target = e.target as HTMLElement;
 
-		if (!closeOnItem && ref.current?.contains(target)) return
+    if (!closeOnItem && ref.current?.contains(target)) return;
 
-		if ((ref.current && target != refObj?.current && isOpen) || (isOpen && target)) {
-			toggleState()
-		}
-	}
-	useEffect(() => {
-		setRef(ref)
-		window.document.addEventListener('click', outsideHandler)
+    if (
+      (ref.current && target != refObj?.current && isOpen) ||
+      (isOpen && target)
+    ) {
+      toggleState();
+    }
+  };
+  useEffect(() => {
+    setRef(ref);
+    window.document.addEventListener('click', outsideHandler);
 
-		return () => {
-			window.document.removeEventListener('click', outsideHandler)
-		}
-	}, [isOpen])
+    return () => {
+      window.document.removeEventListener('click', outsideHandler);
+    };
+  }, [isOpen,outsideHandler,ref]);
 
-	return {
-		isOpen,
-		toggleState,
-	}
-}
+  return {
+    isOpen,
+    toggleState,
+  };
+};

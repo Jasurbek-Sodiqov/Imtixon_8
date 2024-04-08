@@ -31,8 +31,8 @@ type FieldLabel =
 	| 'City'
 	| 'Post Code'
 	| 'Country'
-	| "Client's Name"
-	| "Client's email"
+	| 'Clients Name'
+	| 'Clients email'
 	| 'Invoice Date'
 	| 'Payment Terms'
 	| 'Project Description'
@@ -77,8 +77,7 @@ export const ControlInput = ({
 		if (as === 'date') {
 			setSelectedRules({ required: true })
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [type])
+	}, [type, as])
 
 	return (
 		<InputWrapper>
