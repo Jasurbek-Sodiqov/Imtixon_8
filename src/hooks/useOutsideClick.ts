@@ -22,7 +22,6 @@ export const useOutsideClick = (ref: RefObject<HTMLElement>, closeOnItem = true)
 		return () => {
 			window.document.removeEventListener('click', outsideHandler)
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isOpen])
 
 	return {

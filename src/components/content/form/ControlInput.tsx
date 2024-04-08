@@ -31,9 +31,7 @@ type FieldLabel =
 	| 'City'
 	| 'Post Code'
 	| 'Country'
-	// eslint-disable-next-line quotes
 	| "Client's Name"
-	// eslint-disable-next-line quotes
 	| "Client's email"
 	| 'Invoice Date'
 	| 'Payment Terms'

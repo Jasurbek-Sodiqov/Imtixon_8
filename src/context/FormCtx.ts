@@ -5,9 +5,7 @@ import { InvoiceFormValues } from './FormProviders';
 export type InvoiceData = InvoiceFormValues & { formId: string;}
 
 export enum CollectionName {
-	// eslint-disable-next-line no-unused-vars
 	Drafts = 'drafts',
-	// eslint-disable-next-line no-unused-vars
 	Invoices = 'invoices',
 }
 

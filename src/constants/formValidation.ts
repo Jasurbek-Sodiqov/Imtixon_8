@@ -9,7 +9,6 @@ export const nameValidation = {
 		minLength: (value: string) => value.trim().length >= 3 || 'Use a minimum of 3 characters.',
 		maxLength: (value: string) => value.trim().length <= 12 || 'Use a maximum of 12 characters.',
 		hasSpecialChar: (username: string) => {
-			// eslint-disable-next-line quotes
 			return !containsSpecialChar.test(username) || "Name can't contain special characters"
 		},
 	},
@@ -36,7 +35,6 @@ export const passwordValidation = {
 	},
 }
 export const generalInvoiceValidation = {
-	// eslint-disable-next-line quotes
 	required: "Can't be empty",
 	validate: {
 		minLength: (value: string) => value.trim().length > 0 || 'Can\'t be empty',

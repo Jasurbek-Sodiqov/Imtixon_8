@@ -1,19 +1,21 @@
-import { initializeApp } from 'firebase/app'
-import { getAuth } from 'firebase/auth'
-import { getFirestore } from 'firebase/firestore'
-import { getStorage } from 'firebase/storage'
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-	apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-	authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-	projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-	storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-	messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-	appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-}
+  apiKey: "AIzaSyCBwVwNBcnV_v5ebPckbg3CpGm_RzS9o-w",
+  authDomain: "imtixon-12.firebaseapp.com",
+  projectId: "imtixon-12",
+  storageBucket: "imtixon-12.appspot.com",
+  messagingSenderId: "734087317093",
+  appId: "1:734087317093:web:8f22864bbefcc0d9fa688c",
+  measurementId: "G-K5RF69E9PP",
+	databaseURL:"https://imtixon-12-default-rtdb.asia-southeast1.firebasedatabase.app"
+};
 
-const app = initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig);
 
-export const auth = getAuth(app)
-export const db = getFirestore(app)
-export const storage = getStorage(app)
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+export const storage = getStorage(app);
